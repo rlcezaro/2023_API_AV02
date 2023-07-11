@@ -1,0 +1,28 @@
+/* Definir um estilo simples para as páginas */
+body {
+  font-family: Arial, sans-serif;
+}
+
+h1,
+h2 {
+  color: #333;
+}
+
+form {
+  margin: 20px;
+}
+
+label,
+input,
+button {
+  display: block;
+}
+
+label {
+  margin-top: 10px;
+}
+
+input,
+button {
+  margin-bottom: 10px;
+}

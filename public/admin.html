@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Administração dos Furtos de Bicicleta em Porto Alegre</title>
+    <!-- Incluir o script do seu arquivo JavaScript -->
+    <script src="admin.js"></script>
+    <!-- Incluir o arquivo CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Criar um elemento h1 para o título da página -->
+    <h1>Administração dos Furtos de Bicicleta em Porto Alegre</h1>
+    <!-- Criar um elemento form para adicionar um novo furto -->
+    <form id="add-form" onsubmit="addFurto(event)">
+      <h2>Adicionar um novo furto</h2>
+      <label for="marca">Marca:</label>
+      <input type="text" id="marca" name="marca" required />
+      <label for="modelo">Modelo:</label>
+      <input type="text" id="modelo" name="modelo" required />
+      <label for="horario">Horário:</label>
+      <input type="datetime-local" id="horario" name="horario" required />
+      <label for="local">Local:</label>
+      <input type="text" id="local" name="local" required />
+      <label for="latitude">Latitude:</label>
+      <input type="number" id="latitude" name="latitude" step="0.00000001" required />
+      <label for="longitude">Longitude:</label>
+      <input type="number" id="longitude" name="longitude" step="0.00000001" required />
+      <button type="submit">Adicionar</button>
+    </form>
+    <!-- Criar um elemento form para atualizar um furto existente -->
+    <form id="update-form" onsubmit="updateFurto(event)">
+      <h2>Atualizar um furto existente</h2>
+      <label for="id-update">ID:</label>
+      <input type="number" id="id-update" name="id-update" required />
+      <label for="marca-update">Marca:</label>
+      <input type="text" id="marca-update" name="marca-update" required />
+      <label for="modelo-update">Modelo:</label>
+      <input type="text" id="modelo-update" name="modelo-update" required />
+    </form>
+  </body>
+</html>
+<label for="horario-update">Horário:</label>
+<input
+  type="datetime-local"
+  id="horario-update"
+  name="horario-update"
+  required
+/>
+<label for="local-update">Local:</label>
+<input type="text" id="local-update" name="local-update" required />
+<label for="latitude-update">Latitude:</label>
+<input
+  type="number"
+  id= "latitude-update"name = "latitude-update"
+  step = "0.00000001"
+  required
+/>
+<label for="longitude-update">Longitude:</label>
+<input
+  type="number"
+  id="longitude-update"
+  name="longitude-update"
+  step="0.00000001"
+  required
+/>
+<button type="submit">Atualizar</button>
+</form>
+<!-- Criar um elemento form para consultar um furto pelo id -->
+<form id="search-form" onsubmit="searchFurto(event)">
+<h2>Consultar um furto pelo ID</h2>
+<label for="id-search">ID:</label>
+<input type="number" id="id-search" name="id-search" required />
+<button type="submit">Consultar</button>
+</form>
+<!-- Criar um elemento div para mostrar o resultado da consulta -->
+<div id="search-result"></div>
+<!-- Criar um elemento form para deletar um furto pelo id -->
+<form id="delete-form" onsubmit="deleteFurto(event)">
+<h2>Deletar um furto pelo ID</h2>
+<label for="id-delete">ID:</label>
+<input type="number" id="id-delete" name="id-delete" required />
+<button type="submit">Deletar</button>
+</form>
+<!-- Criar um elemento button para o logout -->
+<button id="logout" onclick="logout()">Logout</button>
+</body>
+</html>
